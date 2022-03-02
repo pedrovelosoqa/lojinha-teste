@@ -1,6 +1,7 @@
 package br.com.lojinha;
 
 import br.com.lojinha.enus.tamanho;
+import br.com.lojinha.pojo.ItemIncluso;
 import br.com.lojinha.pojo.Produto;
 
 import java.util.ArrayList;
@@ -17,12 +18,20 @@ public class LojinhaApp {
 
 
 
-        List<String> itensInclusos = new ArrayList<>();
-        itensInclusos.add("Console");
-        itensInclusos.add("NF");
-        itensInclusos.add("Ccontrole");
-        itensInclusos.add("Cabos");
-        itensInclusos.add("Manual");
+        List<ItemIncluso> itensInclusos = new ArrayList<>();
+        ItemIncluso primeiroItemIncluso = new ItemIncluso("Controle", 2);
+        itensInclusos.add(primeiroItemIncluso);
+
+        ItemIncluso segundoItemIncluso = new ItemIncluso("Console", 1);
+        itensInclusos.add(segundoItemIncluso);
+
+        ItemIncluso terceiroItemIncluso = new ItemIncluso("NF",1 );
+        itensInclusos.add(terceiroItemIncluso);
+
+
+
+
+
         meuProduto.setItensInclusos(itensInclusos);
 
         System.out.println(meuProduto.getMarca());
